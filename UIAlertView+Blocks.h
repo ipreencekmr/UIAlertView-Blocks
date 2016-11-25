@@ -56,4 +56,6 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView * __nonnull alertView, N
 
 @property (copy, nonatomic, nullable) BOOL(^shouldEnableFirstOtherButtonBlock)(UIAlertView * __nonnull alertView);
 
+- (void)dismissAfterDelay:(CGFloat )delay;
+
 @end

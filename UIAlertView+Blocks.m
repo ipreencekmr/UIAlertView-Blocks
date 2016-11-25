@@ -261,4 +261,10 @@ static const void *UIAlertViewShouldEnableFirstOtherButtonBlockKey  = &UIAlertVi
     return YES;
 }
 
+- (void)dismissAfterDelay:(CGFloat )delay {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delay * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [self dismissWithClickedButtonIndex:-1 animated:true];
+    });
+}
+
 @end
